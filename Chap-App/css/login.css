@@ -1,0 +1,100 @@
+
+/* //////////////  css phần màn hình login    ////////////////////// */
+/* #loginScreen-content{
+    color: #ffffff;
+} */
+.login-container{
+    height: 100vh;
+    background-image: url(../img/forest-5375005_1280.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+}
+
+.login-container .aside-right{
+    background-color: #ffffff;
+    width: 29%;
+    text-align: center;
+    height: 68%;
+}
+.login-container .aside-right .header h3{
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(128, 120, 120);
+    text-align: center; 
+    margin-top: 10px;
+    font-weight: 200;
+}
+
+.login-container .aside-right #login-form .input-wrapper{
+    width: 100%;
+
+}
+
+.input-wrapper{
+    outline: none;
+    padding: 20px;
+}
+#login-form{
+    padding: 20px;
+}
+.form-action{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.error{
+    text-align: left;
+}
+
+#redirect-to-login:hover{
+    color: red;
+}
+#redirect-to-register:hover{
+    color: red;
+}
+@media screen and (max-width:700px), 
+    screen and (max-height: 700px){
+    .login-container .aside-right{
+        display: block;
+        display: flex   ;
+        align-items: center;
+        width: 100%;
+        
+    }
+}
+.aside-right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.login-text{
+    font-size: 35px;
+    font-weight: bold;
+    width: 100px;
+    border-bottom: 5px  #0984e3 solid;
+    align-self: center;
+}
+
+.delete-borders{
+    border: none;
+    border-bottom: 2px  #0984e3 solid;
+
+
+    outline: none;
+    overflow: none;
+    padding: 10px;
+    width: 300px;
+}
+
+#redirect-to-chatScreen{
+    outline: none;
+    overflow: hidden;
+    border: none;
+    border-radius: 25px;
+}
