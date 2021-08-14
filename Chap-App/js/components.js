@@ -49,7 +49,7 @@ components.loginScreen = `
     <p class = "login-text">Login<p>
     
     <form id="login-form" >
-        <div style="margin-bottom:20px"class="input-wrapper">
+        <div style="margin-bottom:40px"class="input-wrapper">
             <input class= "delete-borders"  type="text" name="email" placeholder="Email..">
             <div class="error" id="email-error"></div>
         </div>
@@ -59,8 +59,8 @@ components.loginScreen = `
         </div>
 
         <div class="form-action">
-            <span class = "cursor" id="redirect-to-register">
-                Don't have an account? Register
+            <span style ="margin-right: 5px" class = "cursor" id="redirect-to-register">
+                Don't have an account? Register  
             </span>
             <button id = "redirect-to-chatScreen" class="btn" type="submit">
                 Login
@@ -75,17 +75,17 @@ components.loginScreen = `
 components.chatScreen = `
 <div class="chat-container">
         <div class="header">    
-            MindX Chat
+            MINI CHAT
             <div class = "side-bar">
                 <i class="fas fa-bars" aria-hidden="true"></i>
             </div> 
-             <div id="sign-out" class="cursor" style="border: none; background-color: rgb(207, 23, 23); position:absolute; top: 15px; right: 15px; font-size: 10px;width: fit-content;height: 30px; line-height: 30px; border-radius: 5px;">Sign-out</div>
+             <div id="sign-out" class="cursor" style=" display:flex;align-items: center; justify-content: center;border: none; background-color: rgb(207, 23, 23); position:absolute;width:80px; top: 15px; right: 15px; font-size: 10px;height: 40px; line-height: 30px; border-radius: 5px; font-size:15px;font-family: 'Roboto', sans-serif;">Sign out</div>
         </div>
 
             <div class="main">
         <div class="aside-left">
             <div class="create-conversation">
-                <button class="btn">
+                <button class="btn" style="background-color:#34495e">
                     + New conversation
                 </button>
             </div>
@@ -99,20 +99,7 @@ components.chatScreen = `
                 First conversation
             </div>
             <div class="list-messages">
-                <div class="message-container mine">
-                    <div class="content">
-                        hello world
-                    </div>
-                </div>
-
-                <div class="message-container their">
-                    <div class="owner">
-                        abcxyz@gmail.com
-                    </div>
-                    <div class="content">
-                        hiiiiiiiiiiiiiiii
-                    </div>
-                </div>
+              
                 
             </div>
             <form id="send-messages-form">
@@ -129,7 +116,7 @@ components.chatScreen = `
             </div>
             <form id = "add-user-form">
                 <div class="input-wrapper">
-                    <input type="text" placeholder="Input friend email" name="email">
+                    <input class="style-input" type="text" placeholder="Input friend email" name="email">
                     <div class="error" id="add-user-email-error"></div>
                 </div>
                 <button class="btn" type="submit">Save</button>

@@ -14,7 +14,7 @@ view.setActiveScreen = (screenName, fromCreateConversation = false) => {
                 const data = {
                     email: loginForm.email.value,
                     password: loginForm.password.value,
-                };
+                };  
                 console.log(data);
                 controller.login(data);
             });
@@ -41,15 +41,9 @@ view.setActiveScreen = (screenName, fromCreateConversation = false) => {
                 controller.register(data);
             });
             break;
-        ///////////// màn hình chatScreen
-        case `chatScreen`:
+        ///////////// màn hình chatScreen   
+        case `chatScreen`:  
             document.getElementById("app").innerHTML = components.chatScreen;
-
-            // document.getElementById("redirect-to-chatScreen").
-            //     addEventListener("submit", () => {
-            //         view.setAtiveScreen("chatScreen");
-            //     }); phải hỏi anh Chinh phần này mới được.
-            // document.getElementById("welcome-user").innerText =  `Welcome to ${model.currentUser.displayName} to the chat app`;
 
             const sendMessageForm = document.getElementById("send-messages-form");
             sendMessageForm.addEventListener("submit", (e) => {
@@ -64,20 +58,20 @@ view.setActiveScreen = (screenName, fromCreateConversation = false) => {
                     //     content: sendMessageForm.message.value,
                     //     owner: `Bot`,
                     // }
-                    model.addMessage(message);
+                    model.addMessage(message);          
                     // view.addMessage(botMessage);
 
                     sendMessageForm.message.value = '';
                 }
             });
 
-            if (!fromCreateConversation) {
+                if (!fromCreateConversation) {
                 model.loadConversations();  // mới vào sẽ hiển thị lên cuộc hội thoại
                 model.listenConversationsChange(); // lang nghe all change in conversation 
-            }
+            }   
             else { // phai co 2 doan nay moi them div con vao trong list hoi thoai sau khi click Cancel;
                 view.showConversation();
-                view.showCurrentConversation();
+                   view.showCurrentConversation();
             }
             // Log out
             const signOutButton = document.getElementById("sign-out");
@@ -256,12 +250,13 @@ view.updateNumberUsers = (docId, numberUsers) => {
     const secondChild = conversation.getElementsByTagName('div')[1];
     console.log(secondChild); // đã ra => không phải sử dụng lastElmentChild nua => chuyen sang sd cai nay
     // conversation.lastElementChild.innerText = numberUsers + ` users`; // lấy thằng con cuối cùng của nó
-    secondChild.innerText = numberUsers + ` users`;
+    secondChild.innerText = numberUsers + ` users`; 
 }
 view.showNotification = (conversationId) => {
     const conversation = document.getElementById(conversationId);
     conversation.lastElementChild.style = 'display: block';
     /////// thu cach query nhe
+    
     // document.querySelector(`${conversationId} .notification`); /// có 1 cái dở: query nó không chấp nhận những cái Id bắt đầu bằng số ==> ta không dùng cách này; => sd cách ở bên trên
 }
 view.hideNotification = (conversationId) => {

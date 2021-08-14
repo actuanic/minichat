@@ -20,8 +20,8 @@ controller.register = (data) => {
         document.getElementById("last-name-error").
             innerText = '';
     }
-    if (data.email.trim() === "") {
-        document.getElementById("email-error").
+        if (data.email.trim() === "") {
+            document.getElementById("email-error"). 
             innerText = `Please input email`
     }
     else {

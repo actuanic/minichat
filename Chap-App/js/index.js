@@ -1,10 +1,6 @@
-// file khởi tạo dự án của mình ( bắt sự kiện)
+
 const init = () => {
   console.log('Windown loaded');
-  // view.setAtiveScreen('registerScreen');
-  // gọi hàm setAtive trong view
-  // view.setAtiveScreen('loginScreen');
-
 
   /////////////////
   let firebaseConfig = {
@@ -19,9 +15,7 @@ const init = () => {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   console.log(firebase.app().name); // cai nay de hien cai default ( chua hieu cong dung lam)
-  // firestoreFuntion();
 
-  // cái thằng này nó thực hiện khi mà người dùng thay đổi trạng thái: đăng kí, đăng nhập, đang kí
 
   firebase.auth().onAuthStateChanged(function (user) {
     console.log(user);
@@ -34,13 +28,12 @@ const init = () => {
       // User is signed in.
     } else {
       view.setActiveScreen('loginScreen');
-      // alert("Please check your email"); check cc
+
     }
   });
-  //   firebase.analytics();
-  // view.setAtiveScreen('registerScreen;')
+
 }
-window.onload = init; // sau khi load xong hết các js thì mới bắt đầu chạy đéne cái windown.onload này
+window.onload = init; 
 
 
 

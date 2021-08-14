@@ -15,9 +15,8 @@
 }
 
 .login-container .aside-right{
-    background-color: #ffffff;
+    background-color: rgba(236, 240, 241,0.9);
     width: 29%;
-    text-align: center;
     height: 68%;
 }
 .login-container .aside-right .header h3{
@@ -36,7 +35,7 @@
 
 .input-wrapper{
     outline: none;
-    padding: 20px;
+
 }
 #login-form{
     padding: 20px;
@@ -50,12 +49,19 @@
     text-align: left;
 }
 
+
+#redirect-to-login ,#redirect-to-register{
+    transition-duration: 0.25s;
+}
+
 #redirect-to-login:hover{
-    color: red;
+    color: #2c3e50;
 }
 #redirect-to-register:hover{
-    color: red;
+    color:#2c3e50;
 }
+
+
 @media screen and (max-width:700px), 
     screen and (max-height: 700px){
     .login-container .aside-right{
@@ -71,6 +77,8 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    box-shadow: 0 2px 6px 0 hsla(0,0%,0%,0.2);
+    
 }
 
 .login-text{
@@ -79,17 +87,27 @@
     width: 100px;
     border-bottom: 5px  #0984e3 solid;
     align-self: center;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+div.form-action{
+    width: 300px;
 }
 
 .delete-borders{
     border: none;
     border-bottom: 2px  #0984e3 solid;
-
-
+    background-color: transparent;
     outline: none;
     overflow: none;
     padding: 10px;
     width: 300px;
+    transition-duration: 0.25s;
+    
+}
+.delete-borders:hover{
+    border-color: #2980b9;
 }
 
 #redirect-to-chatScreen{

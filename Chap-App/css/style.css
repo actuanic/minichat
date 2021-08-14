@@ -2,10 +2,12 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 .input-wrapper{
-    margin-bottom: 10px;
+    margin-bottom: 30px;
+
 }
 
 
@@ -17,6 +19,7 @@
     border-radius: 5px;
     border: solid 1px black;
     cursor: pointer;
+    font-weight: 30px;
    
 }
 .error{
@@ -35,7 +38,8 @@
     text-align: center;
     color: #ffffff;
     font-size: 30px;
-    background-color: #037bfe;
+    background-color: #222f3e;
+    font-weight: bold;
     
 }
 .btn.btn-light{
@@ -47,4 +51,20 @@
     overflow: hidden;
     border: none;
     border-radius: 25px;
+    transition-duration: 0.25s;
+}
+.btn:hover{
+    background-color: #222f3e;
+}
+.style-input{
+    padding: 10px;
+    border-radius: 25px;
+    border: #037bfe 1px solid;
+    box-shadow: 0 2px 6px 0 hsla(0,0%,0%,0.2);
+    outline: none;
+}
+form#add-user-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
